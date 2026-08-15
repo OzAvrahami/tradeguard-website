@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#060a12;color:#eaf1fc;font-family:Assistant,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:#37c6ff;text-decoration:none}
+  a:hover{color:#6bd6ff}
+  @keyframes tgpulse{0%,100%{opacity:1}50%{opacity:.35}}
+  @keyframes tgflow{0%{stroke-dashoffset:24}100%{stroke-dashoffset:0}}
+  @media(max-width:960px){
+    .tg-hero-grid{grid-template-columns:1fr!important;gap:44px!important}
+    .tg-2col{grid-template-columns:1fr!important}
+    .tg-nav-links{display:none!important}
+    .tg-nav-sec{display:none!important}
+    .tg-h1{font-size:46px!important}
+    .tg-section{padding-left:24px!important;padding-right:24px!important}
+    .tg-showcase{flex-direction:column!important}
+    .tg-callcol{width:100%!important;flex-direction:row!important;flex-wrap:wrap!important}
+  }
+  @media(max-width:620px){
+    .tg-h1{font-size:34px!important}
+    .tg-h2{font-size:28px!important}
+    .tg-steps{grid-template-columns:1fr!important}
+    .tg-rules{grid-template-columns:1fr!important}
+    .tg-trust{grid-template-columns:1fr!important}
+    .tg-flow-h{flex-direction:column!important}
+    .tg-flow-h .tg-arrow-h{transform:rotate(90deg)!important}
+    .tg-foot-cols{grid-template-columns:1fr 1fr!important}
+    .tg-modal{padding:26px 22px!important}
+  }
+</style>
+</helmet>
+
+<!-- ================= HEADER ================= -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(6,10,18,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:70px;display:flex;align-items:center;gap:28px">
+    <a href="#top" style="display:flex;align-items:center;gap:10px">
+      <img src="uploads/TradeGuard-icon-05cbdfdf.png" alt="TradeGuard" style="width:30px;height:30px">
+      <span style="font-size:19px;font-weight:800;letter-spacing:.2px;color:#eaf1fc">TradeGuard</span>
+    </a>
+    <nav class="tg-nav-links" style="display:flex;align-items:center;gap:26px;margin-left:14px">
+      <a href="#product" style="font-size:14px;font-weight:600;color:#9fb0c9">Product</a>
+      <a href="#how" style="font-size:14px;font-weight:600;color:#9fb0c9">How It Works</a>
+      <a href="#integration" style="font-size:14px;font-weight:600;color:#9fb0c9">Tradovate Integration</a>
+      <a href="#security" style="font-size:14px;font-weight:600;color:#9fb0c9">Security</a>
+      <a href="#faq" style="font-size:14px;font-weight:600;color:#9fb0c9">FAQ</a>
+    </nav>
+    <span style="flex:1"></span>
+    <button class="tg-nav-sec" onClick="{{ openContact }}" style="height:38px;padding:0 16px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:transparent;color:#c7d2e3;font-family:Assistant,sans-serif;font-size:14px;font-weight:700;cursor:pointer" style-hover="border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.04)">Contact</button>
+    <button onClick="{{ openBeta }}" style="height:38px;padding:0 18px;border:none;border-radius:8px;background:linear-gradient(180deg,#3a95ff,#2a7df0);color:#fff;font-family:Assistant,sans-serif;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 8px 18px -8px rgba(47,139,255,.7),inset 0 1px 0 rgba(255,255,255,.25)" style-hover="background:linear-gradient(180deg,#4aa0ff,#3585f5)">Join Private Beta</button>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- ================= HERO ================= -->
+<section class="tg-section" style="position:relative;overflow:hidden;padding:96px 32px 90px;background-image:radial-gradient(1100px 640px at 74% -6%,#0d1a34 0%,rgba(13,26,52,0) 60%)">
+  <!-- background grid -->
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(760px 560px at 70% 20%,#000 0%,transparent 78%);-webkit-mask-image:radial-gradient(760px 560px at 70% 20%,#000 0%,transparent 78%);pointer-events:none"></div>
+  <div class="tg-hero-grid" style="position:relative;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+      <span style="display:inline-flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid rgba(55,198,255,.28);border-radius:999px;background:rgba(55,198,255,.06);font-size:12.5px;font-weight:700;letter-spacing:.4px;color:#9fdcf5;white-space:nowrap">
+        <span style="width:7px;height:7px;border-radius:50%;background:#2fce8e;box-shadow:0 0 8px rgba(47,206,142,.8)"></span>
+        Windows desktop · Private beta
+      </span>
+      <h1 class="tg-h1" style="margin:0;font-size:62px;line-height:1.03;font-weight:800;letter-spacing:-1.2px;color:#f3f7fd;text-wrap:balance">Protect your trading discipline.</h1>
+      <p style="margin:0;font-size:19px;line-height:1.55;color:#a9b7cd;max-width:520px;text-wrap:pretty">TradeGuard helps futures traders define their risk rules before the session begins — and enforce them when emotions take over.</p>
+      <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;font-weight:600;color:#7c8da8">
+        <span style="color:#c7d2e3">Set your limits.</span><span style="opacity:.4">·</span>
+        <span style="color:#c7d2e3">Monitor your account.</span><span style="opacity:.4">·</span>
+        <span style="color:#c7d2e3">Protect your discipline.</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:13px;margin-top:6px">
+        <button onClick="{{ openBeta }}" style="height:52px;padding:0 26px;border:none;border-radius:10px;background:linear-gradient(180deg,#3a95ff,#2a7df0);color:#fff;font-family:Assistant,sans-serif;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 14px 30px -10px rgba(47,139,255,.7),inset 0 1px 0 rgba(255,255,255,.25)" style-hover="background:linear-gradient(180deg,#4aa0ff,#3585f5)">Join Private Beta</button>
+        <a href="#how" style="height:52px;padding:0 24px;display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.02);color:#cfe0f2;font-size:16px;font-weight:700" style-hover="border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05)">
+          See How It Works
+          <svg width="15" height="15" viewBox="0 0 15 15"><path d="M2 7.5 H12 M8 3.5 L12 7.5 L8 11.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- APP WINDOW (Open · Active · Connected) -->
+    <div style="display:flex;justify-content:center;perspective:1600px">
+      <div style="width:390px;background:#0b1120;border:1px solid rgba(255,255,255,.09);border-radius:12px;overflow:hidden;box-shadow:0 44px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.4);transform:rotateY(-9deg) rotateX(3deg);transform-style:preserve-3d">
+        <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 6px 0 12px;background:#070c17;border-bottom:1px solid rgba(255,255,255,.05)">
+          <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:17px;height:17px">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.3px;color:#9fb0c9">TradeGuard</span>
+          <span style="flex:1"></span>
+          <span style="width:26px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#7f90ad"><svg width="10" height="10" viewBox="0 0 10 10"><line x1="1" y1="9" x2="9" y2="9" stroke="currentColor" stroke-width="1.2"/></svg></span>
+          <span style="width:26px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#7f90ad"><svg width="9" height="9" viewBox="0 0 9 9"><rect x="1" y="1" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span>
+          <span style="width:26px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#7f90ad"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1 1 L8 8 M8 1 L1 8" stroke="currentColor" stroke-width="1.2"/></svg></span>
+        </div>
+        <div style="padding:20px 22px 16px;display:flex;flex-direction:column;background:linear-gradient(180deg,#0c1424,#0a0f1c)">
+          <div style="display:flex;align-items:center;gap:11px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,.06)">
+            <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:34px;height:34px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.5))">
+            <div style="display:flex;flex-direction:column;gap:1px">
+              <span style="font-size:16px;font-weight:800;color:#eaf1fc">TradeGuard</span>
+              <span style="font-size:10.5px;font-weight:500;color:#7c8da8">Discipline &amp; Risk Control</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:11px;margin-top:18px">
+            <div style="width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(47,139,255,.2),rgba(47,139,255,0) 70%);border:1px solid rgba(55,198,255,.5);box-shadow:0 0 34px -4px rgba(47,139,255,.55),inset 0 0 22px rgba(55,198,255,.12)">
+              <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:50px;height:50px">
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+              <span style="font-size:11px;font-weight:600;letter-spacing:.5px;color:#7c8da8">TRADING STATUS</span>
+              <span style="display:flex;align-items:center;gap:8px">
+                <span style="width:9px;height:9px;border-radius:50%;background:#37c6ff;box-shadow:0 0 10px rgba(55,198,255,.9)"></span>
+                <span style="font-size:24px;font-weight:800;color:#eaf1fc;line-height:1">Open</span>
+              </span>
+            </div>
+          </div>
+          <div style="margin-top:18px;background:#0e1626;border:1px solid rgba(47,206,142,.22);border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;flex-direction:column;gap:1px">
+              <span style="font-size:12px;font-weight:600;color:#b8c6dc">Daily P&amp;L</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;color:#5a6c88">PNL · TODAY</span>
+            </div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:#2fce8e">+$320.00</span>
+          </div>
+          <div style="margin-top:11px;display:flex;gap:10px">
+            <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px;color:#7c8da8">Account</span>
+              <span style="display:flex;align-items:center;gap:6px">
+                <span style="width:7px;height:7px;border-radius:50%;background:#2fce8e;box-shadow:0 0 8px rgba(47,206,142,.8)"></span>
+                <span style="font-size:12px;font-weight:600;color:#a9e6cb">Connected</span>
+              </span>
+            </div>
+            <div style="flex:1;background:#0e1626;border:1px solid rgba(55,198,255,.2);border-radius:9px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.5px;color:#7c8da8">Monitor</span>
+              <span style="display:flex;align-items:center;gap:6px">
+                <span style="width:7px;height:7px;border-radius:50%;background:#37c6ff;box-shadow:0 0 8px rgba(55,198,255,.8)"></span>
+                <span style="font-size:12px;font-weight:600;color:#9fdcf5">Active</span>
+              </span>
+            </div>
+          </div>
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px">
+            <div style="height:44px;border:1px solid rgba(55,198,255,.35);border-radius:9px;background:linear-gradient(180deg,#183253,#12233c);color:#cfe6f7;font-size:14.5px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:9px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)">
+              <svg width="10" height="10" viewBox="0 0 11 11"><rect x="1" y="1" width="9" height="9" rx="1.4" fill="currentColor"/></svg>
+              Monitoring Active
+            </div>
+            <div style="height:40px;border:1px solid rgba(255,90,99,.5);border-radius:9px;background:rgba(255,90,99,.06);color:#ff7a80;font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px">
+              <svg width="12" height="13" viewBox="0 0 14 15"><rect x="2" y="6.5" width="10" height="7.5" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4.2 6.5 V4.4 a2.8 2.8 0 0 1 5.6 0 V6.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+              Lock Now
+            </div>
+          </div>
+          <div style="margin-top:15px;padding-top:11px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:#576782">
+            <span>v2.4.1</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#2fce8e;box-shadow:0 0 6px rgba(47,206,142,.7)"></span>Local service running</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div style="border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);background:#080d18">
+  <div style="max-width:1200px;margin:0 auto;padding:20px 32px;display:flex;flex-wrap:wrap;gap:14px 34px;align-items:center;justify-content:center;font-size:13.5px;font-weight:600;color:#8494ad">
+    <span style="display:inline-flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M7.5 1 L13 3.2 V7 c0 4-2.6 6-5.5 7 C4.6 13 2 11 2 7 V3.2 Z" fill="none" stroke="#37c6ff" stroke-width="1.3" stroke-linejoin="round"/></svg>Read-only account access</span>
+    <span style="display:inline-flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 15 15"><rect x="2.5" y="6.5" width="10" height="7" rx="1.4" fill="none" stroke="#2fce8e" stroke-width="1.3"/><path d="M4.7 6.5 V4.6 a2.8 2.8 0 0 1 5.6 0 V6.5" fill="none" stroke="#2fce8e" stroke-width="1.3"/></svg>Local protection enforcement</span>
+    <span style="display:inline-flex;align-items:center;gap:8px"><svg width="15" height="15" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="5.6" fill="none" stroke="#f2b54b" stroke-width="1.3"/><path d="M7.5 4.4 V8 L10 9.4" fill="none" stroke="#f2b54b" stroke-width="1.3" stroke-linecap="round"/></svg>Real-time P&amp;L monitoring</span>
+    <span style="display:inline-flex;align-items:center;gap:8px"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#9fdcf5">OAuth</span>Built to integrate with Tradovate</span>
+  </div>
+</div>
+
+<!-- ================= PROBLEM ================= -->
+<section id="product" class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+  <div class="tg-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">The problem</span>
+      <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.12;font-weight:800;letter-spacing:-.6px;color:#f3f7fd;text-wrap:balance">Your trading plan is rational.<br><span style="color:#8494ad">Your worst decisions usually aren't.</span></h2>
+      <p style="margin:0;font-size:16.5px;line-height:1.6;color:#a9b7cd;max-width:500px;text-wrap:pretty">Before the market opens, you know exactly where you should stop. After a losing trade, a winning streak, or a large unrealized profit, those predefined limits become much harder to respect.</p>
+      <p style="margin:0;font-size:16.5px;line-height:1.6;color:#a9b7cd;max-width:500px;text-wrap:pretty">TradeGuard turns the discipline rules you set while thinking clearly into safeguards that hold when emotion takes over.</p>
+    </div>
+    <!-- flow -->
+    <div style="display:flex;flex-direction:column;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:26px">
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:#0e1626;border:1px solid rgba(55,198,255,.18);border-radius:10px">
+        <span style="width:30px;height:30px;flex-shrink:0;border-radius:8px;background:rgba(55,198,255,.12);display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 15 15"><rect x="2.5" y="1.5" width="10" height="12" rx="1.5" fill="none" stroke="#37c6ff" stroke-width="1.2"/><line x1="4.6" y1="5" x2="10.4" y2="5" stroke="#37c6ff" stroke-width="1.2"/><line x1="4.6" y1="7.5" x2="10.4" y2="7.5" stroke="#37c6ff" stroke-width="1.2"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">Plan</span><span style="font-size:12.5px;color:#8494ad">You define the limits, calm and rational</span></div>
+      </div>
+      <div style="display:flex;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1 V14 M4 10 L8 14 L12 10" fill="none" stroke="#3a4d6b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:10px">
+        <span style="width:30px;height:30px;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center"><svg width="16" height="14" viewBox="0 0 16 14"><path d="M1 10 L5 6 L8 8.5 L14 2" fill="none" stroke="#9fb0c9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">Trade &amp; Emotion</span><span style="font-size:12.5px;color:#8494ad">The session moves; pressure builds</span></div>
+      </div>
+      <div style="display:flex;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1 V14 M4 10 L8 14 L12 10" fill="none" stroke="#3a4d6b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:#0e1626;border:1px solid rgba(242,181,75,.2);border-radius:10px">
+        <span style="width:30px;height:30px;flex-shrink:0;border-radius:8px;background:rgba(242,181,75,.12);display:flex;align-items:center;justify-content:center"><svg width="16" height="15" viewBox="0 0 16 15"><path d="M8 1.5 L15 13.5 L1 13.5 Z" fill="none" stroke="#f2b54b" stroke-width="1.3" stroke-linejoin="round"/><line x1="8" y1="6" x2="8" y2="9.5" stroke="#f2b54b" stroke-width="1.3"/><circle cx="8" cy="11.4" r=".8" fill="#f2b54b"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">Rule Trigger</span><span style="font-size:12.5px;color:#8494ad">A predefined limit is reached</span></div>
+      </div>
+      <div style="display:flex;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1 V14 M4 10 L8 14 L12 10" fill="none" stroke="#3a4d6b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;background:rgba(47,206,142,.07);border:1px solid rgba(47,206,142,.3);border-radius:10px">
+        <span style="width:30px;height:30px;flex-shrink:0;border-radius:8px;background:rgba(47,206,142,.14);display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M7.5 1 L13 3.2 V7 c0 4-2.6 6-5.5 7 C4.6 13 2 11 2 7 V3.2 Z" fill="none" stroke="#2fce8e" stroke-width="1.3" stroke-linejoin="round"/><path d="M5.4 7.4 L7 9 L9.8 5.6" fill="none" stroke="#2fce8e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#d6f5e6">Protection</span><span style="font-size:12.5px;color:#7fcfab">TradeGuard enforces your rule locally</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section id="how" style="border-top:1px solid rgba(255,255,255,.06);background:#080d18">
+  <div class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:52px">
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">How it works</span>
+      <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">Four steps, one outcome: control.</h2>
+    </div>
+    <div class="tg-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+      <div style="display:flex;flex-direction:column;gap:14px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px" style-hover="border-color:rgba(55,198,255,.28)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#37c6ff">01</span>
+        <span style="width:38px;height:38px;border-radius:10px;background:rgba(55,198,255,.1);border:1px solid rgba(55,198,255,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 4 H16 M2 9 H16 M2 14 H10" stroke="#37c6ff" stroke-width="1.4" stroke-linecap="round"/><circle cx="13" cy="9" r="2" fill="#0b1120" stroke="#37c6ff" stroke-width="1.4"/></svg></span>
+        <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Define your rules</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">Set your limits before emotions enter the equation — Maximum Daily Loss, Daily Profit Target, Profit Protection, Maximum Trades.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px" style-hover="border-color:rgba(55,198,255,.28)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#37c6ff">02</span>
+        <span style="width:38px;height:38px;border-radius:10px;background:rgba(55,198,255,.1);border:1px solid rgba(55,198,255,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M7 11 a3 3 0 0 1 0-4 l2-2 a3 3 0 0 1 4 4 l-1 1" fill="none" stroke="#37c6ff" stroke-width="1.4" stroke-linecap="round"/><path d="M11 7 a3 3 0 0 1 0 4 l-2 2 a3 3 0 0 1-4-4 l1-1" fill="none" stroke="#37c6ff" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+        <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Connect your account</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">Securely connect a supported trading account. For Tradovate, the planned integration uses the official OAuth authorization flow.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px" style-hover="border-color:rgba(55,198,255,.28)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#37c6ff">03</span>
+        <span style="width:38px;height:38px;border-radius:10px;background:rgba(55,198,255,.1);border:1px solid rgba(55,198,255,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 13 L6 8 L9 10.5 L16 3" fill="none" stroke="#37c6ff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="3" r="1.4" fill="#37c6ff"/></svg></span>
+        <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Monitor in real time</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">TradeGuard monitors relevant account activity and P&amp;L against your predefined rules throughout the session.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;background:#0b1120;border:1px solid rgba(47,206,142,.22);border-radius:14px;padding:24px" style-hover="border-color:rgba(47,206,142,.4)">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#2fce8e">04</span>
+        <span style="width:38px;height:38px;border-radius:10px;background:rgba(47,206,142,.1);border:1px solid rgba(47,206,142,.24);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><rect x="3" y="8" width="12" height="8.5" rx="1.6" fill="none" stroke="#2fce8e" stroke-width="1.4"/><path d="M5.6 8 V5.6 a3.4 3.4 0 0 1 6.8 0 V8" fill="none" stroke="#2fce8e" stroke-width="1.4"/></svg></span>
+        <h3 style="margin:0;font-size:17px;font-weight:800;color:#d6f5e6">Protect the session</h3>
+        <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fbfa6">When a rule is triggered, TradeGuard activates the configured protection mechanism locally on your computer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RISK & DISCIPLINE RULES ================= -->
+<section class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+  <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:48px;max-width:640px">
+    <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">Risk &amp; discipline rules</span>
+    <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">The rules you set, working as designed.</h2>
+    <p style="margin:0;font-size:16.5px;line-height:1.6;color:#a9b7cd;text-wrap:pretty">Every rule maps to a live monitor inside the app. These are the same cards traders see during a session.</p>
+  </div>
+  <div class="tg-rules" style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px">
+
+    <!-- Maximum Daily Loss -->
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:11px">
+          <span style="width:34px;height:34px;border-radius:9px;background:rgba(255,90,99,.1);border:1px solid rgba(255,90,99,.24);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 14 V4 M4 8 L8 4 L12 8" fill="none" stroke="#ff7a80" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 8 8)"/></svg></span>
+          <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Maximum Daily Loss</h3>
+        </div>
+        <span style="padding:5px 11px;border-radius:999px;background:rgba(242,181,75,.12);border:1px solid rgba(242,181,75,.3);font-size:12px;font-weight:700;color:#f2b54b">Approaching Limit</span>
+      </div>
+      <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">Set the maximum you're willing to lose in a day. When the limit is reached, TradeGuard can activate your configured protection.</p>
+      <div style="display:flex;gap:11px">
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Limit</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#c7d2e3">−$500</span></div>
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(242,181,75,.22);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Current P&amp;L</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#f2b54b">−$472</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="height:7px;border-radius:4px;background:#0e1626;overflow:hidden;border:1px solid rgba(255,255,255,.05)"><div style="width:94%;height:100%;background:linear-gradient(90deg,#f2b54b,#ff7a80)"></div></div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#7c8da8">94% of daily loss limit used</span>
+      </div>
+    </div>
+
+    <!-- Profit Protection -->
+    <div style="background:#0b1120;border:1px solid rgba(47,206,142,.2);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:11px">
+          <span style="width:34px;height:34px;border-radius:9px;background:rgba(47,206,142,.1);border:1px solid rgba(47,206,142,.26);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 1 L14 3.4 V7.5 c0 4.2-2.8 6.4-6 7.5 C4.8 13.9 2 11.7 2 7.5 V3.4 Z" fill="none" stroke="#2fce8e" stroke-width="1.3" stroke-linejoin="round"/><path d="M5.6 7.8 L7.3 9.5 L10.6 5.8" fill="none" stroke="#2fce8e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Profit Protection</h3>
+        </div>
+        <span style="padding:5px 11px;border-radius:999px;background:rgba(47,206,142,.12);border:1px solid rgba(47,206,142,.34);font-size:12px;font-weight:700;color:#2fce8e">Protection Active</span>
+      </div>
+      <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">Reach a strong profit and TradeGuard can protect part of the day's gains once a configured threshold is crossed.</p>
+      <div style="display:flex;gap:11px">
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Session High</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#c7d2e3">+$850</span></div>
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(47,206,142,.28);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Protected Floor</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#2fce8e">+$500</span></div>
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Current</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#2fce8e">+$520</span></div>
+      </div>
+    </div>
+
+    <!-- Daily Profit Target -->
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:11px">
+          <span style="width:34px;height:34px;border-radius:9px;background:rgba(55,198,255,.1);border:1px solid rgba(55,198,255,.24);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="#37c6ff" stroke-width="1.3"/><circle cx="8" cy="8" r="3" fill="none" stroke="#37c6ff" stroke-width="1.3"/><circle cx="8" cy="8" r=".9" fill="#37c6ff"/></svg></span>
+          <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Daily Profit Target</h3>
+        </div>
+        <span style="padding:5px 11px;border-radius:999px;background:rgba(55,198,255,.12);border:1px solid rgba(55,198,255,.32);font-size:12px;font-weight:700;color:#37c6ff">Target Reached</span>
+      </div>
+      <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">Define when the planned objective for the day has been reached, so you can step away with the session won.</p>
+      <div style="display:flex;gap:11px">
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Daily Target</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#c7d2e3">+$750</span></div>
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(55,198,255,.24);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Current P&amp;L</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#37c6ff">+$768</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="height:7px;border-radius:4px;background:#0e1626;overflow:hidden;border:1px solid rgba(255,255,255,.05)"><div style="width:100%;height:100%;background:linear-gradient(90deg,#2f8bff,#37c6ff)"></div></div>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#7c8da8">102% of daily target reached</span>
+      </div>
+    </div>
+
+    <!-- Maximum Trades -->
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:11px">
+          <span style="width:34px;height:34px;border-radius:9px;background:rgba(148,164,173,.1);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16"><rect x="2" y="2" width="5" height="5" rx="1" fill="none" stroke="#9fb0c9" stroke-width="1.3"/><rect x="9" y="2" width="5" height="5" rx="1" fill="none" stroke="#9fb0c9" stroke-width="1.3"/><rect x="2" y="9" width="5" height="5" rx="1" fill="none" stroke="#9fb0c9" stroke-width="1.3"/><path d="M9.5 11.5 L11 13 L14 10" fill="none" stroke="#9fb0c9" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 style="margin:0;font-size:17px;font-weight:800;color:#eaf1fc">Maximum Trades</h3>
+        </div>
+        <span style="padding:5px 11px;border-radius:999px;background:rgba(242,181,75,.12);border:1px solid rgba(242,181,75,.3);font-size:12px;font-weight:700;color:#f2b54b">1 Remaining</span>
+      </div>
+      <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8fa0ba">Cap the number of trades per session to prevent overtrading after the plan for the day is done.</p>
+      <div style="display:flex;gap:11px">
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Maximum</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#c7d2e3">6</span></div>
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Used</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#c7d2e3">5</span></div>
+        <div style="flex:1;background:#0e1626;border:1px solid rgba(242,181,75,.22);border-radius:9px;padding:12px 14px;display:flex;flex-direction:column;gap:3px"><span style="font-size:11px;font-weight:600;color:#7c8da8">Remaining</span><span style="font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:#f2b54b">1</span></div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <span style="flex:1;height:7px;border-radius:3px;background:#37c6ff"></span><span style="flex:1;height:7px;border-radius:3px;background:#37c6ff"></span><span style="flex:1;height:7px;border-radius:3px;background:#37c6ff"></span><span style="flex:1;height:7px;border-radius:3px;background:#37c6ff"></span><span style="flex:1;height:7px;border-radius:3px;background:#37c6ff"></span><span style="flex:1;height:7px;border-radius:3px;background:#22303f"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PRODUCT SHOWCASE ================= -->
+<section style="border-top:1px solid rgba(255,255,255,.06);background:radial-gradient(1000px 560px at 30% 0%,#0d1a34 0%,#080d18 62%)">
+  <div class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:56px">
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">The product</span>
+      <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">A real desktop app, always in the corner.</h2>
+      <p style="margin:0;max-width:560px;font-size:16.5px;line-height:1.6;color:#a9b7cd;text-wrap:pretty">TradeGuard runs as a lightweight Windows application beside your trading platform — monitoring, never intervening in your orders.</p>
+    </div>
+    <div class="tg-showcase" style="display:flex;gap:40px;align-items:center;justify-content:center">
+      <!-- left callouts -->
+      <div class="tg-callcol" style="display:flex;flex-direction:column;gap:22px;width:220px">
+        <div style="display:flex;flex-direction:column;gap:4px;text-align:right"><span style="font-size:14px;font-weight:700;color:#eaf1fc">Trading Session Status</span><span style="font-size:12.5px;line-height:1.45;color:#8494ad">Open, monitored, or locked — at a glance.</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;text-align:right"><span style="font-size:14px;font-weight:700;color:#2fce8e">Current P&amp;L</span><span style="font-size:12.5px;line-height:1.45;color:#8494ad">Read-only, live from your account.</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px;text-align:right"><span style="font-size:14px;font-weight:700;color:#37c6ff">Account Connection</span><span style="font-size:12.5px;line-height:1.45;color:#8494ad">OAuth-linked, read-only status.</span></div>
+      </div>
+      <!-- big window -->
+      <div style="width:420px;flex-shrink:0;background:#0b1120;border:1px solid rgba(255,255,255,.09);border-radius:13px;overflow:hidden;box-shadow:0 50px 100px -34px rgba(0,0,0,.9),0 0 0 1px rgba(0,0,0,.4)">
+        <div style="display:flex;align-items:center;gap:8px;height:38px;padding:0 6px 0 13px;background:#070c17;border-bottom:1px solid rgba(255,255,255,.05)">
+          <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:18px;height:18px">
+          <span style="font-size:12px;font-weight:600;letter-spacing:.3px;color:#9fb0c9">TradeGuard</span>
+          <span style="flex:1"></span>
+          <span style="width:26px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#7f90ad"><svg width="10" height="10" viewBox="0 0 10 10"><line x1="1" y1="9" x2="9" y2="9" stroke="currentColor" stroke-width="1.2"/></svg></span>
+          <span style="width:26px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#7f90ad"><svg width="9" height="9" viewBox="0 0 9 9"><rect x="1" y="1" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span>
+          <span style="width:26px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#7f90ad"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1 1 L8 8 M8 1 L1 8" stroke="currentColor" stroke-width="1.2"/></svg></span>
+        </div>
+        <div style="padding:22px 24px 18px;display:flex;flex-direction:column;background:linear-gradient(180deg,#0c1424,#0a0f1c)">
+          <div style="display:flex;align-items:center;gap:11px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,.06)">
+            <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:36px;height:36px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.5))">
+            <div style="display:flex;flex-direction:column;gap:1px"><span style="font-size:17px;font-weight:800;color:#eaf1fc">TradeGuard</span><span style="font-size:10.5px;font-weight:500;color:#7c8da8">Discipline &amp; Risk Control</span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:11px;margin-top:18px">
+            <div style="width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(47,139,255,.2),rgba(47,139,255,0) 70%);border:1px solid rgba(55,198,255,.5);box-shadow:0 0 34px -4px rgba(47,139,255,.55),inset 0 0 22px rgba(55,198,255,.12)"><img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:54px;height:54px"></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:5px"><span style="font-size:11px;font-weight:600;letter-spacing:.5px;color:#7c8da8">TRADING STATUS</span><span style="display:flex;align-items:center;gap:8px"><span style="width:9px;height:9px;border-radius:50%;background:#37c6ff;box-shadow:0 0 10px rgba(55,198,255,.9)"></span><span style="font-size:25px;font-weight:800;color:#eaf1fc;line-height:1">Open</span></span></div>
+          </div>
+          <div style="margin-top:18px;background:#0e1626;border:1px solid rgba(47,206,142,.22);border-radius:10px;padding:13px 16px;display:flex;align-items:center;justify-content:space-between">
+            <div style="display:flex;flex-direction:column;gap:1px"><span style="font-size:12px;font-weight:600;color:#b8c6dc">Daily P&amp;L</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;color:#5a6c88">PNL · TODAY</span></div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:#2fce8e">+$520.00</span>
+          </div>
+          <div style="margin-top:11px;background:rgba(47,206,142,.06);border:1px solid rgba(47,206,142,.24);border-radius:10px;padding:11px 14px;display:flex;align-items:center;justify-content:space-between">
+            <span style="display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#a9e6cb"><svg width="15" height="15" viewBox="0 0 15 15"><path d="M7.5 1 L13 3.2 V7 c0 4-2.6 6-5.5 7 C4.6 13 2 11 2 7 V3.2 Z" fill="none" stroke="#2fce8e" stroke-width="1.3" stroke-linejoin="round"/></svg>Profit Protection</span>
+            <span style="font-size:12.5px;font-weight:700;color:#2fce8e">Floor +$500</span>
+          </div>
+          <div style="margin-top:11px;display:flex;gap:10px">
+            <div style="flex:1;background:#0e1626;border:1px solid rgba(255,255,255,.06);border-radius:9px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7c8da8">Account</span><span style="display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#2fce8e;box-shadow:0 0 8px rgba(47,206,142,.8)"></span><span style="font-size:12px;font-weight:600;color:#a9e6cb">Connected</span></span></div>
+            <div style="flex:1;background:#0e1626;border:1px solid rgba(55,198,255,.2);border-radius:9px;padding:9px 12px;display:flex;align-items:center;justify-content:space-between"><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#7c8da8">Monitor</span><span style="display:flex;align-items:center;gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#37c6ff;box-shadow:0 0 8px rgba(55,198,255,.8)"></span><span style="font-size:12px;font-weight:600;color:#9fdcf5">Active</span></span></div>
+          </div>
+          <div style="margin-top:15px;padding-top:11px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:10px;color:#576782"><span>v2.4.1</span><span style="display:flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#2fce8e;box-shadow:0 0 6px rgba(47,206,142,.7)"></span>Local service running</span></div>
+        </div>
+      </div>
+      <!-- right callouts -->
+      <div class="tg-callcol" style="display:flex;flex-direction:column;gap:22px;width:220px">
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;font-weight:700;color:#2fce8e">Profit Protection</span><span style="font-size:12.5px;line-height:1.45;color:#8494ad">Locks in a floor of the day's gains.</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;font-weight:700;color:#eaf1fc">Rule Status</span><span style="font-size:12.5px;line-height:1.45;color:#8494ad">Every active rule and how close it is.</span></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:14px;font-weight:700;color:#eaf1fc">Protection Status</span><span style="font-size:12.5px;line-height:1.45;color:#8494ad">Local service confirmed running.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRADOVATE INTEGRATION ================= -->
+<section id="integration" class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+  <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:48px;max-width:680px">
+    <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">Tradovate integration</span>
+    <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">Built for secure Tradovate integration.</h2>
+    <p style="margin:0;font-size:16.5px;line-height:1.6;color:#a9b7cd;text-wrap:pretty">TradeGuard is being developed to connect to Tradovate through the official OAuth authorization flow. The integration is designed to use <b style="color:#cfe0f2">read-only account access</b> to monitor the account activity and P&amp;L required by TradeGuard's protection rules.</p>
+  </div>
+
+  <div class="tg-2col" style="display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:stretch">
+    <!-- diagram -->
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:0">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#647998;margin-bottom:18px">Data flow · read only</span>
+      <div class="tg-flow-node" style="display:flex;align-items:center;gap:14px;padding:15px 18px;background:#0e1626;border:1px solid rgba(255,255,255,.08);border-radius:11px">
+        <span style="width:34px;height:34px;border-radius:9px;background:rgba(148,164,173,.08);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 17 17"><circle cx="8.5" cy="5" r="3" fill="none" stroke="#9fb0c9" stroke-width="1.3"/><path d="M2.5 15 c0-3.3 2.7-5 6-5 s6 1.7 6 5" fill="none" stroke="#9fb0c9" stroke-width="1.3"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">Trader</span><span style="font-size:12px;color:#8494ad">Authorizes access, owns the account</span></div>
+      </div>
+      <div style="display:flex;justify-content:center;padding:5px 0"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M9 1 V17 M4.5 12.5 L9 17 L13.5 12.5" fill="none" stroke="#37c6ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:15px 18px;background:#0e1626;border:1px solid rgba(55,198,255,.22);border-radius:11px">
+        <span style="width:34px;height:34px;border-radius:9px;background:rgba(55,198,255,.1);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#37c6ff">API</span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">Tradovate OAuth</span><span style="font-size:12px;color:#8494ad">Official authorization flow · no password shared</span></div>
+      </div>
+      <div style="display:flex;justify-content:center;padding:5px 0"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M9 1 V17 M4.5 12.5 L9 17 L13.5 12.5" fill="none" stroke="#37c6ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:15px 18px;background:#0e1626;border:1px solid rgba(55,198,255,.22);border-radius:11px">
+        <span style="width:34px;height:34px;border-radius:9px;background:rgba(55,198,255,.1);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 17 17"><path d="M2.5 6 L8.5 3 L14.5 6 V11 L8.5 14 L2.5 11 Z" fill="none" stroke="#37c6ff" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 8.5 L8 10.5 L11.4 6.6" fill="none" stroke="#37c6ff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">Read-Only Account Access</span><span style="font-size:12px;color:#8494ad">Account activity &amp; P&amp;L only</span></div>
+      </div>
+      <div style="display:flex;justify-content:center;padding:5px 0"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M9 1 V17 M4.5 12.5 L9 17 L13.5 12.5" fill="none" stroke="#37c6ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:15px 18px;background:#0e1626;border:1px solid rgba(255,255,255,.08);border-radius:11px">
+        <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:34px;height:34px">
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#eaf1fc">TradeGuard · Risk Engine</span><span style="font-size:12px;color:#8494ad">Evaluates data against your rules</span></div>
+      </div>
+      <div style="display:flex;justify-content:center;padding:5px 0"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M9 1 V17 M4.5 12.5 L9 17 L13.5 12.5" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div style="display:flex;align-items:center;gap:14px;padding:15px 18px;background:rgba(47,206,142,.07);border:1px solid rgba(47,206,142,.3);border-radius:11px">
+        <span style="width:34px;height:34px;border-radius:9px;background:rgba(47,206,142,.12);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" viewBox="0 0 17 17"><rect x="3" y="7.5" width="11" height="7.5" rx="1.5" fill="none" stroke="#2fce8e" stroke-width="1.3"/><path d="M5.4 7.5 V5.4 a3.1 3.1 0 0 1 6.2 0 V7.5" fill="none" stroke="#2fce8e" stroke-width="1.3"/></svg></span>
+        <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700;color:#d6f5e6">Local Protection</span><span style="font-size:12px;color:#7fcfab">Enforced on the trader's own computer</span></div>
+      </div>
+    </div>
+
+    <!-- what it does NOT do -->
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="background:#0b1120;border:1px solid rgba(47,206,142,.22);border-radius:13px;padding:20px;display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#2fce8e">What TradeGuard reads</span>
+        <span style="font-size:14.5px;font-weight:700;color:#eaf1fc">Account activity &amp; real-time P&amp;L</span>
+        <span style="font-size:13px;line-height:1.5;color:#8fa0ba">Only the minimum account information the protection rules need to work.</span>
+      </div>
+      <div style="background:#0b1120;border:1px solid rgba(255,90,99,.2);border-radius:13px;padding:20px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff7a80">TradeGuard does NOT request permission to</span>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <span style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#c7d2e3"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="#ff7a80" stroke-width="1.3"/><line x1="4" y1="4" x2="12" y2="12" stroke="#ff7a80" stroke-width="1.3"/></svg>Place orders</span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#c7d2e3"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="#ff7a80" stroke-width="1.3"/><line x1="4" y1="4" x2="12" y2="12" stroke="#ff7a80" stroke-width="1.3"/></svg>Modify orders</span>
+          <span style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#c7d2e3"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="#ff7a80" stroke-width="1.3"/><line x1="4" y1="4" x2="12" y2="12" stroke="#ff7a80" stroke-width="1.3"/></svg>Cancel orders</span>
+        </div>
+        <span style="font-size:13px;line-height:1.5;color:#8fa0ba;padding-top:2px;border-top:1px solid rgba(255,255,255,.06)">TradeGuard does not submit trades through the Tradovate API. Enforcement happens locally, never by instructing Tradovate.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- trust cards -->
+  <div class="tg-trust" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px">
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:22px;display:flex;flex-direction:column;gap:11px" style-hover="border-color:rgba(55,198,255,.28)">
+      <span style="width:36px;height:36px;border-radius:9px;background:rgba(55,198,255,.1);border:1px solid rgba(55,198,255,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><rect x="3" y="8" width="12" height="8" rx="1.5" fill="none" stroke="#37c6ff" stroke-width="1.3"/><path d="M5.6 8 V5.8 a3.4 3.4 0 0 1 6.8 0 V8" fill="none" stroke="#37c6ff" stroke-width="1.3"/><circle cx="9" cy="11.6" r="1.1" fill="#37c6ff"/></svg></span>
+      <h3 style="margin:0;font-size:15.5px;font-weight:800;color:#eaf1fc">OAuth Authentication</h3>
+      <p style="margin:0;font-size:13px;line-height:1.5;color:#8fa0ba">Users authenticate through the official authorization flow — never inside TradeGuard.</p>
+    </div>
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:22px;display:flex;flex-direction:column;gap:11px" style-hover="border-color:rgba(55,198,255,.28)">
+      <span style="width:36px;height:36px;border-radius:9px;background:rgba(55,198,255,.1);border:1px solid rgba(55,198,255,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="5" fill="none" stroke="#37c6ff" stroke-width="1.3"/><circle cx="9" cy="9" r="1.6" fill="#37c6ff"/><path d="M9 4 V2 M9 16 V14" stroke="#37c6ff" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+      <h3 style="margin:0;font-size:15.5px;font-weight:800;color:#eaf1fc">Read-Only Access</h3>
+      <p style="margin:0;font-size:13px;line-height:1.5;color:#8fa0ba">Only the account information required for monitoring is requested.</p>
+    </div>
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:22px;display:flex;flex-direction:column;gap:11px" style-hover="border-color:rgba(55,198,255,.28)">
+      <span style="width:36px;height:36px;border-radius:9px;background:rgba(255,90,99,.09);border:1px solid rgba(255,90,99,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9 L6 5 M2 9 L6 13 M2 9 H14" fill="none" stroke="#ff7a80" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><line x1="15" y1="4" x2="15" y2="14" stroke="#ff7a80" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+      <h3 style="margin:0;font-size:15.5px;font-weight:800;color:#eaf1fc">No Order Execution</h3>
+      <p style="margin:0;font-size:13px;line-height:1.5;color:#8fa0ba">TradeGuard does not submit, modify, or cancel trades through the API.</p>
+    </div>
+    <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:13px;padding:22px;display:flex;flex-direction:column;gap:11px" style-hover="border-color:rgba(55,198,255,.28)">
+      <span style="width:36px;height:36px;border-radius:9px;background:rgba(47,206,142,.09);border:1px solid rgba(47,206,142,.2);display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M9 2 L15 4.2 V8.5 c0 4.4-2.9 6.7-6 7.8 C5.9 15.2 3 12.9 3 8.5 V4.2 Z" fill="none" stroke="#2fce8e" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+      <h3 style="margin:0;font-size:15.5px;font-weight:800;color:#eaf1fc">No Password Storage</h3>
+      <p style="margin:0;font-size:13px;line-height:1.5;color:#8fa0ba">TradeGuard does not collect or store your Tradovate username or password.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCAL PROTECTION ARCHITECTURE ================= -->
+<section style="border-top:1px solid rgba(255,255,255,.06);background:#080d18">
+  <div class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+    <div class="tg-2col" style="display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">Architecture</span>
+        <h2 class="tg-h2" style="margin:0;font-size:38px;line-height:1.12;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">Account data comes from Tradovate.<br><span style="color:#8494ad">Protection happens on your machine.</span></h2>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:#a9b7cd;max-width:460px;text-wrap:pretty">The Tradovate integration supplies the account information TradeGuard needs. TradeGuard evaluates that information against your predefined rules, and the protection mechanism is enforced locally on your computer.</p>
+        <p style="margin:0;font-size:14.5px;line-height:1.6;color:#8494ad;max-width:460px;text-wrap:pretty">Tradovate is never asked to lock your account or to cancel orders. The distinction between <b style="color:#cfe0f2">account monitoring</b> and <b style="color:#cfe0f2">local enforcement</b> is deliberate and complete.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:#0b1120;border:1px solid rgba(55,198,255,.2);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#37c6ff">Read side</span>
+            <span style="font-size:15px;font-weight:700;color:#eaf1fc">Account monitoring</span>
+            <span style="font-size:12.5px;line-height:1.45;color:#8494ad">P&amp;L and activity, read-only via OAuth.</span>
+          </div>
+          <div style="background:#0b1120;border:1px solid rgba(47,206,142,.24);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#2fce8e">Act side</span>
+            <span style="font-size:15px;font-weight:700;color:#eaf1fc">Local enforcement</span>
+            <span style="font-size:12.5px;line-height:1.45;color:#8494ad">The restriction runs on your PC.</span>
+          </div>
+        </div>
+        <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37c6ff;width:88px">Account Data</span><span style="flex:1;height:1px;background:rgba(55,198,255,.25)"></span><span style="font-size:12px;color:#8494ad">from Tradovate</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9fb0c9;width:88px">Monitoring</span><span style="flex:1;height:1px;background:rgba(255,255,255,.1)"></span><span style="font-size:12px;color:#8494ad">TradeGuard reads</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9fb0c9;width:88px">Risk Rules</span><span style="flex:1;height:1px;background:rgba(255,255,255,.1)"></span><span style="font-size:12px;color:#8494ad">your definitions</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#f2b54b;width:88px">Rule Trigger</span><span style="flex:1;height:1px;background:rgba(242,181,75,.25)"></span><span style="font-size:12px;color:#8494ad">threshold met</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#2fce8e;width:88px">Local Protection</span><span style="flex:1;height:1px;background:rgba(47,206,142,.3)"></span><span style="font-size:12px;color:#a9e6cb">enforced on device</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECURITY ================= -->
+<section id="security" class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+  <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:600px">
+    <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">Security &amp; privacy</span>
+    <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">Your trading account stays yours.</h2>
+    <p style="margin:0;font-size:16.5px;line-height:1.6;color:#a9b7cd;text-wrap:pretty">TradeGuard is designed with a conservative, minimal-access posture. The product requests only what its protection rules require — and nothing more.</p>
+  </div>
+  <div class="tg-trust" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+    <div style="display:flex;align-items:flex-start;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 20px"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px"><path d="M6 9.4 L8 11.4 L12.4 6.4" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="7.4" fill="none" stroke="rgba(47,206,142,.4)" stroke-width="1.2"/></svg><span style="font-size:14.5px;font-weight:600;color:#c7d2e3">OAuth-based authentication</span></div>
+    <div style="display:flex;align-items:flex-start;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 20px"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px"><path d="M6 9.4 L8 11.4 L12.4 6.4" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="7.4" fill="none" stroke="rgba(47,206,142,.4)" stroke-width="1.2"/></svg><span style="font-size:14.5px;font-weight:600;color:#c7d2e3">No Tradovate password storage</span></div>
+    <div style="display:flex;align-items:flex-start;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 20px"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px"><path d="M6 9.4 L8 11.4 L12.4 6.4" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="7.4" fill="none" stroke="rgba(47,206,142,.4)" stroke-width="1.2"/></svg><span style="font-size:14.5px;font-weight:600;color:#c7d2e3">Read-only account permissions</span></div>
+    <div style="display:flex;align-items:flex-start;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 20px"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px"><path d="M6 9.4 L8 11.4 L12.4 6.4" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="7.4" fill="none" stroke="rgba(47,206,142,.4)" stroke-width="1.2"/></svg><span style="font-size:14.5px;font-weight:600;color:#c7d2e3">No API order execution</span></div>
+    <div style="display:flex;align-items:flex-start;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 20px"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px"><path d="M6 9.4 L8 11.4 L12.4 6.4" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="7.4" fill="none" stroke="rgba(47,206,142,.4)" stroke-width="1.2"/></svg><span style="font-size:14.5px;font-weight:600;color:#c7d2e3">Local protection enforcement</span></div>
+    <div style="display:flex;align-items:flex-start;gap:12px;background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:18px 20px"><svg width="18" height="18" viewBox="0 0 18 18" style="flex-shrink:0;margin-top:1px"><path d="M6 9.4 L8 11.4 L12.4 6.4" fill="none" stroke="#2fce8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="9" r="7.4" fill="none" stroke="rgba(47,206,142,.4)" stroke-width="1.2"/></svg><span style="font-size:14.5px;font-weight:600;color:#c7d2e3">Minimal required account data</span></div>
+  </div>
+  <p style="margin:22px 0 0;font-size:12.5px;line-height:1.5;color:#647998;max-width:720px">TradeGuard makes no claim of third-party certification. Security practices will be documented as the product matures and are described here only where accurate today.</p>
+</section>
+
+<!-- ================= WHY TRADEGUARD ================= -->
+<section style="border-top:1px solid rgba(255,255,255,.06);background:#080d18">
+  <div class="tg-section" style="max-width:1200px;margin:0 auto;padding:100px 32px">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:48px">
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">Why TradeGuard</span>
+      <h2 class="tg-h2" style="margin:0;font-size:40px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">A journal reviews the past. TradeGuard guards the present.</h2>
+    </div>
+    <div class="tg-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:0 auto">
+      <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8494ad">Trading journal</span>
+        <span style="font-size:22px;font-weight:800;color:#eaf1fc">Review &amp; analysis</span>
+        <span style="font-size:14.5px;color:#8fa0ba;line-height:1.5">Explains what happened after the session. Essential for learning — but it acts once the trades are already done.</span>
+        <span style="margin-top:6px;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#8494ad"><span style="width:7px;height:7px;border-radius:50%;background:#4b5a73"></span>After the trade</span>
+      </div>
+      <div style="background:#0b1120;border:1px solid rgba(55,198,255,.28);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px;box-shadow:0 0 0 1px rgba(55,198,255,.06),0 20px 50px -30px rgba(47,139,255,.5)">
+        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#37c6ff">TradeGuard</span>
+        <span style="font-size:22px;font-weight:800;color:#eaf1fc">Rules &amp; protection</span>
+        <span style="font-size:14.5px;color:#a9b7cd;line-height:1.5">Helps protect your discipline while the session is happening. Complementary to a journal, fundamentally different in purpose.</span>
+        <span style="margin-top:6px;display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:#9fdcf5"><span style="width:7px;height:7px;border-radius:50%;background:#37c6ff;box-shadow:0 0 8px rgba(55,198,255,.8)"></span>During the session</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUILT FOR FUTURES TRADERS ================= -->
+<section class="tg-section" style="max-width:1200px;margin:0 auto;padding:90px 32px">
+  <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px">
+    <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">Built for futures traders</span>
+    <h2 class="tg-h2" style="margin:0;font-size:34px;line-height:1.15;font-weight:800;letter-spacing:-.5px;color:#f3f7fd;max-width:640px">Purpose-built for the way active traders actually work.</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:11px;max-width:760px;margin-top:6px">
+      <span style="padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:#0b1120;font-size:14px;font-weight:600;color:#c7d2e3">Futures trading</span>
+      <span style="padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:#0b1120;font-size:14px;font-weight:600;color:#c7d2e3">Intraday trading</span>
+      <span style="padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:#0b1120;font-size:14px;font-weight:600;color:#c7d2e3">Prop trading</span>
+      <span style="padding:9px 16px;border:1px solid rgba(55,198,255,.28);border-radius:999px;background:rgba(55,198,255,.06);font-size:14px;font-weight:700;color:#9fdcf5">Tradovate integration planned</span>
+      <span style="padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:#0b1120;font-size:14px;font-weight:600;color:#c7d2e3">Risk-conscious traders</span>
+      <span style="padding:9px 16px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:#0b1120;font-size:14px;font-weight:600;color:#c7d2e3">Rule-based discipline</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" style="border-top:1px solid rgba(255,255,255,.06);background:#080d18">
+  <div class="tg-section" style="max-width:820px;margin:0 auto;padding:100px 32px">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:44px">
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#647998">FAQ</span>
+      <h2 class="tg-h2" style="margin:0;font-size:38px;line-height:1.1;font-weight:800;letter-spacing:-.6px;color:#f3f7fd">Questions traders and reviewers ask.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="6">
+        <div style="background:#0b1120;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden">
+          <button onClick="{{ item.toggle }}" style="width:100%;padding:18px 22px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-family:Assistant,sans-serif" style-hover="background:rgba(255,255,255,.02)">
+            <span style="font-size:16px;font-weight:700;color:#eaf1fc">{{ item.q }}</span>
+            <span style="width:24px;height:24px;flex-shrink:0;border-radius:6px;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:#9fb0c9;transform:{{ item.rot }};transition:transform .2s"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 4 L6 8 L10 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+          <sc-if value="{{ item.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 22px 20px;font-size:14.5px;line-height:1.6;color:#a9b7cd">{{ item.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section style="position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.06);background-image:radial-gradient(900px 500px at 50% 120%,#0d1a34 0%,#060a12 60%)">
+  <div class="tg-section" style="max-width:820px;margin:0 auto;padding:110px 32px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px">
+    <img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:56px;height:56px;filter:drop-shadow(0 8px 22px rgba(0,0,0,.5))">
+    <h2 class="tg-h2" style="margin:0;font-size:46px;line-height:1.08;font-weight:800;letter-spacing:-.9px;color:#f3f7fd;text-wrap:balance">Trade with rules you can actually enforce.</h2>
+    <p style="margin:0;font-size:18px;line-height:1.55;color:#a9b7cd;max-width:560px;text-wrap:pretty">TradeGuard is being built for futures traders who want stronger control over their risk, discipline, and trading behavior.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:13px;justify-content:center;margin-top:6px">
+      <button onClick="{{ openBeta }}" style="height:54px;padding:0 28px;border:none;border-radius:10px;background:linear-gradient(180deg,#3a95ff,#2a7df0);color:#fff;font-family:Assistant,sans-serif;font-size:16.5px;font-weight:700;cursor:pointer;box-shadow:0 14px 30px -10px rgba(47,139,255,.7),inset 0 1px 0 rgba(255,255,255,.25)" style-hover="background:linear-gradient(180deg,#4aa0ff,#3585f5)">Join Private Beta</button>
+      <button onClick="{{ openContact }}" style="height:54px;padding:0 26px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.02);color:#cfe0f2;font-family:Assistant,sans-serif;font-size:16.5px;font-weight:700;cursor:pointer" style-hover="border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05)">Contact TradeGuard</button>
+    </div>
+    <span style="font-size:13px;color:#647998;margin-top:4px">Currently under active development · preparing for private beta</span>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer style="border-top:1px solid rgba(255,255,255,.06);background:#070b14">
+  <div style="max-width:1200px;margin:0 auto;padding:56px 32px 40px">
+    <div class="tg-foot-cols" style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <a href="#top" style="display:flex;align-items:center;gap:10px"><img src="uploads/TradeGuard-icon-05cbdfdf.png" style="width:28px;height:28px"><span style="font-size:18px;font-weight:800;color:#eaf1fc">TradeGuard</span></a>
+        <p style="margin:0;font-size:13.5px;line-height:1.55;color:#8494ad;max-width:280px">A trading discipline and risk-protection system for futures traders. Set your rules, monitor your account, protect your session.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#647998">Product</span>
+        <a href="#product" style="font-size:14px;color:#9fb0c9">Product</a>
+        <a href="#how" style="font-size:14px;color:#9fb0c9">How It Works</a>
+        <a href="#integration" style="font-size:14px;color:#9fb0c9">Tradovate Integration</a>
+        <a href="#security" style="font-size:14px;color:#9fb0c9">Security</a>
+        <a href="#faq" style="font-size:14px;color:#9fb0c9">FAQ</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#647998">Legal</span>
+        <a href="#" style="font-size:14px;color:#9fb0c9">Privacy Policy</a>
+        <a href="#" style="font-size:14px;color:#9fb0c9">Terms of Service</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#647998">Contact</span>
+        <a href="mailto:hello@tradeguard.app" style="font-size:14px;color:#9fb0c9">hello@tradeguard.app</a>
+        <button onClick="{{ openContact }}" style="align-self:flex-start;padding:0;border:none;background:transparent;color:#37c6ff;font-family:Assistant,sans-serif;font-size:14px;font-weight:600;cursor:pointer">Contact form</button>
+      </div>
+    </div>
+    <div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:12px">
+      <p style="margin:0;font-size:12px;line-height:1.55;color:#5f728f">TradeGuard is an independent software product and is not affiliated with or endorsed by Tradovate or NinjaTrader unless explicitly stated otherwise.</p>
+      <p style="margin:0;font-size:12px;line-height:1.55;color:#5f728f">Trading futures involves substantial risk and is not suitable for every investor.</p>
+      <span style="font-size:12px;color:#3f4f68;margin-top:4px">© 2026 TradeGuard. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MODAL ================= -->
+<sc-if value="{{ showOverlay }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:100;background:rgba(4,7,13,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px">
+    <div onClick="{{ stop }}" class="tg-modal" style="width:100%;max-width:440px;background:#0b1120;border:1px solid rgba(255,255,255,.1);border-radius:16px;box-shadow:0 50px 100px -30px rgba(0,0,0,.9);padding:32px;position:relative">
+      <button onClick="{{ closeModal }}" style="position:absolute;top:16px;right:16px;width:32px;height:32px;border:none;border-radius:8px;background:rgba(255,255,255,.05);color:#9fb0c9;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(255,255,255,.1);color:#eaf1fc"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 2 L10 10 M10 2 L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+
+      <!-- BETA FORM -->
+      <sc-if value="{{ isBeta }}" hint-placeholder-val="{{ false }}">
+        <sc-if value="{{ betaSent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:14px 0">
+            <span style="width:56px;height:56px;border-radius:50%;background:rgba(47,206,142,.12);border:1px solid rgba(47,206,142,.4);display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M8 13.5 L11.5 17 L18 9" fill="none" stroke="#2fce8e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 style="margin:0;font-size:22px;font-weight:800;color:#eaf1fc">You're on the list</h3>
+            <p style="margin:0;font-size:14.5px;line-height:1.55;color:#a9b7cd">Thanks for your interest in the TradeGuard private beta. We'll reach out as spots open up.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ betaForm }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitBeta }}" style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <h3 style="margin:0;font-size:22px;font-weight:800;color:#eaf1fc">Join the private beta</h3>
+              <p style="margin:0;font-size:14px;line-height:1.5;color:#8fa0ba">Tell us where you trade and we'll be in touch. No account is created yet.</p>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#9fb0c9">Name<input required placeholder="Your name" style="height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:#0e1626;color:#eaf1fc;font-family:Assistant,sans-serif;font-size:14.5px;font-weight:500;outline:none" style-focus="border-color:rgba(55,198,255,.5)"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#9fb0c9">Email<input required type="email" placeholder="you@example.com" style="height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:#0e1626;color:#eaf1fc;font-family:Assistant,sans-serif;font-size:14.5px;font-weight:500;outline:none" style-focus="border-color:rgba(55,198,255,.5)"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#9fb0c9">Trading platform<select style="height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:#0e1626;color:#eaf1fc;font-family:Assistant,sans-serif;font-size:14.5px;font-weight:500;outline:none" style-focus="border-color:rgba(55,198,255,.5)"><option>Tradovate</option><option>NinjaTrader</option><option>Other</option></select></label>
+            <button type="submit" style="height:48px;border:none;border-radius:9px;background:linear-gradient(180deg,#3a95ff,#2a7df0);color:#fff;font-family:Assistant,sans-serif;font-size:15.5px;font-weight:700;cursor:pointer;box-shadow:0 10px 22px -8px rgba(47,139,255,.7),inset 0 1px 0 rgba(255,255,255,.25);margin-top:4px" style-hover="background:linear-gradient(180deg,#4aa0ff,#3585f5)">Request beta access</button>
+          </form>
+        </sc-if>
+      </sc-if>
+
+      <!-- CONTACT FORM -->
+      <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+        <sc-if value="{{ contactSent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:14px 0">
+            <span style="width:56px;height:56px;border-radius:50%;background:rgba(47,206,142,.12);border:1px solid rgba(47,206,142,.4);display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M8 13.5 L11.5 17 L18 9" fill="none" stroke="#2fce8e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 style="margin:0;font-size:22px;font-weight:800;color:#eaf1fc">Message received</h3>
+            <p style="margin:0;font-size:14.5px;line-height:1.55;color:#a9b7cd">Thanks for reaching out. We'll reply to your email as soon as we can.</p>
+          </div>
+        </sc-if>
+        <sc-if value="{{ contactForm }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitContact }}" style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <h3 style="margin:0;font-size:22px;font-weight:800;color:#eaf1fc">Contact TradeGuard</h3>
+              <p style="margin:0;font-size:14px;line-height:1.5;color:#8fa0ba">For traders and integration partners alike. We read every message.</p>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#9fb0c9">Name<input required placeholder="Your name" style="height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:#0e1626;color:#eaf1fc;font-family:Assistant,sans-serif;font-size:14.5px;font-weight:500;outline:none" style-focus="border-color:rgba(55,198,255,.5)"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#9fb0c9">Email<input required type="email" placeholder="you@example.com" style="height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:#0e1626;color:#eaf1fc;font-family:Assistant,sans-serif;font-size:14.5px;font-weight:500;outline:none" style-focus="border-color:rgba(55,198,255,.5)"></label>
+            <label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:700;color:#9fb0c9">Message<textarea required rows="4" placeholder="How can we help?" style="padding:11px 14px;border:1px solid rgba(255,255,255,.1);border-radius:9px;background:#0e1626;color:#eaf1fc;font-family:Assistant,sans-serif;font-size:14.5px;font-weight:500;outline:none;resize:vertical" style-focus="border-color:rgba(55,198,255,.5)"></textarea></label>
+            <button type="submit" style="height:48px;border:none;border-radius:9px;background:linear-gradient(180deg,#3a95ff,#2a7df0);color:#fff;font-family:Assistant,sans-serif;font-size:15.5px;font-weight:700;cursor:pointer;box-shadow:0 10px 22px -8px rgba(47,139,255,.7),inset 0 1px 0 rgba(255,255,255,.25);margin-top:4px" style-hover="background:linear-gradient(180deg,#4aa0ff,#3585f5)">Send message</button>
+          </form>
+        </sc-if>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { modal: null, openFaq: 0, betaSent: false, contactSent: false };
+
+  renderVals() {
+    const faqData = [
+      { q: "Does TradeGuard place trades?", a: "No. TradeGuard does not require API permission to submit, modify, or cancel orders. It reads account information for monitoring only." },
+      { q: "Does TradeGuard need my Tradovate password?", a: "No. The planned Tradovate integration uses the official OAuth authorization flow, so you authenticate directly with Tradovate and never share your password with TradeGuard." },
+      { q: "What Tradovate data does TradeGuard need?", a: "Read-only account information required to monitor account activity and real-time P&L used by TradeGuard's protection rules — nothing more." },
+      { q: "What happens when a rule is triggered?", a: "TradeGuard activates the configured protection mechanism locally on your computer. Tradovate is not asked to lock your account or cancel orders." },
+      { q: "Is TradeGuard a trading bot?", a: "No. TradeGuard does not decide when to enter or exit trades. It focuses on enforcing the discipline and risk rules you define yourself." },
+      { q: "Is TradeGuard available now?", a: "TradeGuard is currently under active development and preparing for private beta. Join the beta list to be notified as access opens up." },
+    ];
+    const faqs = faqData.map((f, i) => ({
+      q: f.q,
+      a: f.a,
+      open: this.state.openFaq === i,
+      rot: this.state.openFaq === i ? "rotate(180deg)" : "rotate(0deg)",
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })),
+    }));
+
+    return {
+      faqs,
+      showOverlay: this.state.modal !== null,
+      isBeta: this.state.modal === "beta",
+      isContact: this.state.modal === "contact",
+      betaSent: this.state.betaSent,
+      contactSent: this.state.contactSent,
+      betaForm: this.state.modal === "beta" && !this.state.betaSent,
+      contactForm: this.state.modal === "contact" && !this.state.contactSent,
+      openBeta: () => this.setState({ modal: "beta", betaSent: false }),
+      openContact: () => this.setState({ modal: "contact", contactSent: false }),
+      closeModal: () => this.setState({ modal: null }),
+      stop: (e) => e.stopPropagation(),
+      submitBeta: (e) => { e.preventDefault(); this.setState({ betaSent: true }); },
+      submitContact: (e) => { e.preventDefault(); this.setState({ contactSent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
