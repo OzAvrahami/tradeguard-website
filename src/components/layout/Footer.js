@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Brand from "@/components/ui/Brand";
 import { ModalButton } from "@/components/ui/ModalProvider";
 
@@ -7,10 +8,10 @@ export default function Footer() {
       <div className="footerInner">
         <div className="footerColumns">
           <div className="footerBrand">
-            <a href="#top" aria-label="TradeGuard home"><Brand compact /></a>
+            <Link href="/" aria-label="TradeGuard home"><Brand compact /></Link>
             <p>A trading discipline and risk-protection system for futures traders. Set your rules, monitor your account, protect your session.</p>
           </div>
-          <FooterColumn title="Product" links={[["Product", "#product"], ["How It Works", "#how"], ["Tradovate Integration", "#integration"], ["Security", "#security"], ["FAQ", "#faq"]]} />
+          <FooterColumn title="Product" links={[["Product", "/#product"], ["How It Works", "/#how"], ["Tradovate Integration", "/#integration"], ["Security", "/#security"], ["FAQ", "/#faq"]]} />
           <FooterColumn title="Legal" links={[["Privacy Policy", "/privacy"], ["Terms of Service", "/terms"]]} />
           <div className="footerColumn">
             <span className="footerTitle">Contact</span>
@@ -32,7 +33,7 @@ function FooterColumn({ title, links }) {
   return (
     <div className="footerColumn">
       <span className="footerTitle">{title}</span>
-      {links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+      {links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
     </div>
   );
 }
