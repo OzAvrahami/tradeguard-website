@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="siteHeader">
       <div className="headerInner">
-        <Link href="/" aria-label="TradeGuard home"><Brand /></Link>
+        <Link href="/" aria-label="LimitPact home"><Brand /></Link>
         <nav className="desktopNav" aria-label="Primary navigation">
           {links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
         </nav>

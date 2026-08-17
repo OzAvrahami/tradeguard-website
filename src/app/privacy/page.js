@@ -3,8 +3,11 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata = {
-  title: "Privacy Policy — TradeGuard",
-  description: "TradeGuard Privacy Policy, effective August 15, 2026.",
+  title: "Privacy Policy — LimitPact",
+  description: "LimitPact Privacy Policy, effective August 15, 2026.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPolicy() {
@@ -14,15 +17,15 @@ export default function PrivacyPolicy() {
       <main className="legalPage">
         <header className="legalHero sectionPad">
           <div className="legalContainer">
-            <Link className="legalBack" href="/">← Back to TradeGuard</Link>
+            <Link className="legalBack" href="/">← Back to LimitPact</Link>
             <span className="kicker">Legal</span>
             <h1>Privacy Policy</h1>
             <div className="legalDates">
               <span><strong>Effective Date:</strong> August 15, 2026</span>
               <span><strong>Last Updated:</strong> August 15, 2026</span>
             </div>
-            <p>TradeGuard is a software product operated by <strong>Oz Avrahami</strong>, an individual based in Israel (&quot;TradeGuard&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).</p>
-            <p>This Privacy Policy explains how we collect, use, store, and disclose personal information when you use the TradeGuard website, desktop application, private beta, account integrations, and related services (collectively, the <strong>&quot;Services&quot;</strong>).</p>
+            <p>LimitPact is a software product operated by <strong>Oz Avrahami</strong>, an individual based in Israel (&quot;LimitPact&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).</p>
+            <p>This Privacy Policy explains how we collect, use, store, and disclose personal information when you use the LimitPact website, desktop application, private beta, account integrations, and related services (collectively, the <strong>&quot;Services&quot;</strong>).</p>
             <p>By using the Services or providing information to us, you acknowledge the practices described in this Privacy Policy.</p>
           </div>
         </header>
@@ -30,7 +33,7 @@ export default function PrivacyPolicy() {
         <div className="legalBody sectionPad">
           <article className="legalContainer legalArticle">
             <LegalSection number="1" title="Who We Are">
-              <p>TradeGuard is a trading discipline and risk-protection software product for futures traders.</p>
+              <p>LimitPact is a trading discipline and risk-protection software product for futures traders.</p>
               <p>For privacy-related questions or requests, contact:</p>
               <ContactBlock />
             </LegalSection>
@@ -38,20 +41,20 @@ export default function PrivacyPolicy() {
             <LegalSection number="2" title="Scope of This Policy">
               <p>This Privacy Policy applies to:</p>
               <ul>
-                <li>the TradeGuard website;</li>
-                <li>the TradeGuard desktop application;</li>
-                <li>the TradeGuard private beta;</li>
+                <li>the LimitPact website;</li>
+                <li>the LimitPact desktop application;</li>
+                <li>the LimitPact private beta;</li>
                 <li>contact and beta-registration forms;</li>
                 <li>supported trading-account integrations;</li>
-                <li>communications between you and TradeGuard; and</li>
-                <li>related TradeGuard services.</li>
+                <li>communications between you and LimitPact; and</li>
+                <li>related LimitPact services.</li>
               </ul>
               <p>It does not apply to third-party websites, brokers, trading platforms, or services that maintain their own privacy policies.</p>
             </LegalSection>
 
             <LegalSection number="3" title="Information We Collect">
               <h3>3.1 Information You Provide Directly</h3>
-              <p>When you join the private beta, contact us, or otherwise communicate with TradeGuard, we may collect:</p>
+              <p>When you join the private beta, contact us, or otherwise communicate with LimitPact, we may collect:</p>
               <ul>
                 <li>your name;</li>
                 <li>your email address;</li>
@@ -62,7 +65,7 @@ export default function PrivacyPolicy() {
               <p>You are not required to provide information through our forms, but we may be unable to respond to your request or provide beta access without the information requested.</p>
 
               <h3>3.2 Trading Account Information</h3>
-              <p>If and when supported account integrations become available and you choose to connect an account, TradeGuard may process limited account information required to provide its monitoring and protection features.</p>
+              <p>If and when supported account integrations become available and you choose to connect an account, LimitPact may process limited account information required to provide its monitoring and protection features.</p>
               <p>Depending on the integration, this may include:</p>
               <ul>
                 <li>trading-account identifiers;</li>
@@ -74,15 +77,15 @@ export default function PrivacyPolicy() {
                 <li>session-related account information; and</li>
                 <li>other read-only information required to evaluate the protection rules you configure.</li>
               </ul>
-              <p>TradeGuard is designed to request only the account information reasonably necessary for its monitoring and protection features.</p>
+              <p>LimitPact is designed to request only the account information reasonably necessary for its monitoring and protection features.</p>
 
               <h3>3.3 OAuth Authorization Information</h3>
-              <p>Where an integration uses OAuth, TradeGuard may process authorization tokens or similar credentials required to maintain the authorized connection.</p>
-              <p>TradeGuard does <strong>not</strong> collect or store your Tradovate username or password when authentication is performed through the official OAuth authorization flow.</p>
+              <p>Where an integration uses OAuth, LimitPact may process authorization tokens or similar credentials required to maintain the authorized connection.</p>
+              <p>LimitPact does <strong>not</strong> collect or store your Tradovate username or password when authentication is performed through the official OAuth authorization flow.</p>
               <p>OAuth tokens are not your trading-platform password but should still be treated as sensitive authorization credentials.</p>
 
               <h3>3.4 Technical and Security Information</h3>
-              <p>When you access the website or Services, certain technical information may be processed automatically by TradeGuard or its infrastructure providers, such as:</p>
+              <p>When you access the website or Services, certain technical information may be processed automatically by LimitPact or its infrastructure providers, such as:</p>
               <ul>
                 <li>IP address;</li>
                 <li>browser type;</li>
@@ -103,7 +106,7 @@ export default function PrivacyPolicy() {
                 <li>operate and provide the Services;</li>
                 <li>maintain your private-beta registration;</li>
                 <li>respond to questions and contact requests;</li>
-                <li>communicate with you about beta availability or TradeGuard;</li>
+                <li>communicate with you about beta availability or LimitPact;</li>
                 <li>connect and maintain authorized trading-account integrations;</li>
                 <li>monitor account information against protection rules you configure;</li>
                 <li>provide application functionality;</li>
@@ -127,14 +130,14 @@ export default function PrivacyPolicy() {
               </ul>
               <p>Where processing is based on consent, you may withdraw that consent at any time.</p>
               <h3>Performance of Our Agreement With You</h3>
-              <p>We may process information where necessary to provide Services you request, including supported account integrations and TradeGuard application functionality.</p>
+              <p>We may process information where necessary to provide Services you request, including supported account integrations and LimitPact application functionality.</p>
               <h3>Legitimate Interests</h3>
               <p>We may process information where reasonably necessary for legitimate interests such as:</p>
               <ul>
-                <li>operating TradeGuard;</li>
+                <li>operating LimitPact;</li>
                 <li>responding to inquiries;</li>
                 <li>maintaining and improving reliability;</li>
-                <li>protecting users and TradeGuard from abuse;</li>
+                <li>protecting users and LimitPact from abuse;</li>
                 <li>securing our systems; and</li>
                 <li>troubleshooting technical problems,</li>
               </ul>
@@ -144,12 +147,12 @@ export default function PrivacyPolicy() {
             </LegalSection>
 
             <LegalSection number="6" title="Tradovate and Other Third-Party Integrations">
-              <p>TradeGuard may integrate with third-party trading platforms and services.</p>
+              <p>LimitPact may integrate with third-party trading platforms and services.</p>
               <p>The planned Tradovate integration is designed to use an official OAuth authorization flow and read-only account access.</p>
-              <p>TradeGuard does not require Tradovate API permission to:</p>
+              <p>LimitPact does not require Tradovate API permission to:</p>
               <ul><li>place orders;</li><li>modify orders; or</li><li>cancel orders.</li></ul>
               <p>Authentication performed by Tradovate is governed by Tradovate&apos;s own terms and privacy practices.</p>
-              <p>TradeGuard is an independent software product and is not affiliated with or endorsed by Tradovate or NinjaTrader unless explicitly stated otherwise.</p>
+              <p>LimitPact is an independent software product and is not affiliated with or endorsed by Tradovate or NinjaTrader unless explicitly stated otherwise.</p>
             </LegalSection>
 
             <LegalSection number="7" title="How We Share Information">
@@ -165,16 +168,16 @@ export default function PrivacyPolicy() {
               <p>We may disclose information where we reasonably believe disclosure is required to:</p>
               <ul>
                 <li>comply with applicable law or legal process;</li>
-                <li>protect the rights, safety, or security of TradeGuard or others;</li>
+                <li>protect the rights, safety, or security of LimitPact or others;</li>
                 <li>investigate abuse or security incidents; or</li>
                 <li>establish, exercise, or defend legal claims.</li>
               </ul>
               <h3>Business Changes</h3>
-              <p>If TradeGuard or substantially all of its operations are transferred, reorganized, or acquired in the future, relevant information may be transferred as part of that transaction, subject to applicable law.</p>
+              <p>If LimitPact or substantially all of its operations are transferred, reorganized, or acquired in the future, relevant information may be transferred as part of that transaction, subject to applicable law.</p>
             </LegalSection>
 
             <LegalSection number="8" title="Cookies and Similar Technologies">
-              <p>At this stage, TradeGuard does not use advertising cookies, behavioral advertising trackers, or advertising pixels.</p>
+              <p>At this stage, LimitPact does not use advertising cookies, behavioral advertising trackers, or advertising pixels.</p>
               <p>We also do not currently use third-party analytics for behavioral tracking.</p>
               <p>The website may use strictly necessary storage or similar technologies where required for:</p>
               <ul><li>core functionality;</li><li>security;</li><li>session operation; or</li><li>user-interface preferences.</li></ul>
@@ -187,14 +190,14 @@ export default function PrivacyPolicy() {
               <ul>
                 <li>private-beta and contact information may be retained for up to <strong>24 months after the last meaningful interaction</strong>, unless an ongoing relationship requires longer retention;</li>
                 <li>OAuth authorization information is retained only while reasonably necessary to maintain the authorized integration and is removed or invalidated when no longer required where technically possible;</li>
-                <li>account information is retained only to the extent required for TradeGuard functionality, security, troubleshooting, or legally required records;</li>
+                <li>account information is retained only to the extent required for LimitPact functionality, security, troubleshooting, or legally required records;</li>
                 <li>technical and security logs are retained for periods reasonably necessary for security, reliability, and troubleshooting.</li>
               </ul>
               <p>We may retain limited information for longer where necessary to comply with legal obligations, resolve disputes, prevent abuse, or enforce agreements.</p>
             </LegalSection>
 
             <LegalSection number="10" title="International Data Transfers">
-              <p>TradeGuard is operated from Israel and may use service providers located in Israel or other countries.</p>
+              <p>LimitPact is operated from Israel and may use service providers located in Israel or other countries.</p>
               <p>This means personal information may be processed in a country other than the country where you live.</p>
               <p>Where applicable law requires safeguards for an international transfer of personal information, we will use legally recognized safeguards or another lawful transfer mechanism as required.</p>
             </LegalSection>
@@ -220,28 +223,28 @@ export default function PrivacyPolicy() {
               </ul>
               <p>These rights are subject to applicable legal exceptions and limitations.</p>
               <p>To exercise a privacy right, contact:</p>
-              <p><strong><a href="mailto:hello@tradeguard.app">hello@tradeguard.app</a></strong></p>
+              <p><strong><a href="mailto:hello@limitpact.com">hello@limitpact.com</a></strong></p>
               <p>We may request information reasonably necessary to verify your identity before completing certain requests.</p>
             </LegalSection>
 
             <LegalSection number="13" title="Automated Decision-Making">
-              <p>TradeGuard&apos;s protection rules may automatically evaluate trading-account information against thresholds that <strong>you configure</strong>.</p>
-              <p>These rules are intended to control local TradeGuard functionality and do not make investment decisions on your behalf.</p>
-              <p>TradeGuard does not use automated profiling to determine your creditworthiness, employment, insurance eligibility, or similar legally significant characteristics.</p>
+              <p>LimitPact&apos;s protection rules may automatically evaluate trading-account information against thresholds that <strong>you configure</strong>.</p>
+              <p>These rules are intended to control local LimitPact functionality and do not make investment decisions on your behalf.</p>
+              <p>LimitPact does not use automated profiling to determine your creditworthiness, employment, insurance eligibility, or similar legally significant characteristics.</p>
             </LegalSection>
 
             <LegalSection number="14" title="No Sale of Personal Information">
-              <p>TradeGuard does not sell personal information.</p>
-              <p>TradeGuard does not currently monetize personal information through targeted advertising or data-broker relationships.</p>
+              <p>LimitPact does not sell personal information.</p>
+              <p>LimitPact does not currently monetize personal information through targeted advertising or data-broker relationships.</p>
               <p>If this practice ever changes, this Privacy Policy will be updated before such use begins, and applicable rights and consent requirements will be respected.</p>
             </LegalSection>
 
             <LegalSection number="15" title="Age Requirement">
-              <p>TradeGuard is intended only for individuals who are <strong>18 years of age or older</strong>.</p>
+              <p>LimitPact is intended only for individuals who are <strong>18 years of age or older</strong>.</p>
               <p>The Services are not directed to children or minors.</p>
-              <p>If we learn that personal information was collected from a person who is not eligible to use TradeGuard, we may delete the information and terminate access where appropriate.</p>
-              <p>If you believe a minor has provided personal information to TradeGuard, contact us at:</p>
-              <p><strong><a href="mailto:hello@tradeguard.app">hello@tradeguard.app</a></strong></p>
+              <p>If we learn that personal information was collected from a person who is not eligible to use LimitPact, we may delete the information and terminate access where appropriate.</p>
+              <p>If you believe a minor has provided personal information to LimitPact, contact us at:</p>
+              <p><strong><a href="mailto:hello@limitpact.com">hello@limitpact.com</a></strong></p>
             </LegalSection>
 
             <LegalSection number="16" title="Third-Party Websites and Services">
@@ -251,7 +254,7 @@ export default function PrivacyPolicy() {
             </LegalSection>
 
             <LegalSection number="17" title="Changes to This Privacy Policy">
-              <p>We may update this Privacy Policy as TradeGuard develops, new features are introduced, legal requirements change, or our data practices change.</p>
+              <p>We may update this Privacy Policy as LimitPact develops, new features are introduced, legal requirements change, or our data practices change.</p>
               <p>When we make material changes, we will update the <strong>Last Updated</strong> date and provide additional notice where required by applicable law.</p>
               <p>Your continued use of the Services after an updated Policy becomes effective is subject to applicable law.</p>
             </LegalSection>
@@ -280,10 +283,10 @@ function LegalSection({ number, title, children }) {
 function ContactBlock({ compact = false }) {
   return (
     <address className={compact ? "legalContact compact" : "legalContact"}>
-      <strong>TradeGuard</strong>
+      <strong>LimitPact</strong>
       <span>Operated by{compact ? " " : ": "}<strong>Oz Avrahami</strong></span>
       <span>{compact ? "Israel" : <>Country: <strong>Israel</strong></>}</span>
-      <a href="mailto:hello@tradeguard.app">hello@tradeguard.app</a>
+      <a href="mailto:hello@limitpact.com">hello@limitpact.com</a>
     </address>
   );
 }

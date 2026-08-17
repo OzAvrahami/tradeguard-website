@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="heroCopy">
           <span className="eyebrowPill"><i className="dot dotGreen" />Windows desktop · Private beta</span>
           <h1>Protect your trading discipline.</h1>
-          <p className="heroLead">TradeGuard helps futures traders define their risk rules before the session begins — and enforce them when emotions take over.</p>
+          <p className="heroLead">LimitPact helps futures traders define their risk rules before the session begins — and enforce them when emotions take over.</p>
           <div className="heroMantra"><span>Set your limits.</span><i>·</i><span>Monitor your account.</span><i>·</i><span>Protect your discipline.</span></div>
           <div className="ctaRow">
             <ModalButton modal="beta" className="button buttonPrimary buttonLarge">Join Private Beta</ModalButton>

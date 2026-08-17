@@ -1,8 +1,8 @@
 const steps = [
   ["01", "≡", "Define your rules", "Set your limits before emotions enter the equation — Maximum Daily Loss, Daily Profit Target, Profit Protection, Maximum Trades."],
   ["02", "⌁", "Connect your account", "Securely connect a supported trading account. For Tradovate, the planned integration uses the official OAuth authorization flow."],
-  ["03", "⌁", "Monitor in real time", "TradeGuard monitors relevant account activity and P&L against your predefined rules throughout the session."],
-  ["04", "▣", "Protect the session", "When a rule is triggered, TradeGuard activates the configured protection mechanism locally on your computer."],
+  ["03", "⌁", "Monitor in real time", "LimitPact monitors relevant account activity and P&L against your predefined rules throughout the session."],
+  ["04", "▣", "Protect the session", "When a rule is triggered, LimitPact activates the configured protection mechanism locally on your computer."],
 ];
 
 export default function HowItWorks() {

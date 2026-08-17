@@ -9,7 +9,7 @@ import ProductShowcase from "@/components/sections/ProductShowcase";
 import TradovateIntegration from "@/components/sections/TradovateIntegration";
 import Architecture from "@/components/sections/Architecture";
 import Security from "@/components/sections/Security";
-import WhyTradeGuard from "@/components/sections/WhyTradeGuard";
+import WhyLimitPact from "@/components/sections/WhyLimitPact";
 import FuturesTraders from "@/components/sections/FuturesTraders";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -29,7 +29,7 @@ export default function Home() {
         <TradovateIntegration />
         <Architecture />
         <Security />
-        <WhyTradeGuard />
+        <WhyLimitPact />
         <FuturesTraders />
         <FAQ />
         <FinalCTA />

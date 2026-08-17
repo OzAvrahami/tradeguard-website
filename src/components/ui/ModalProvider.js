@@ -4,9 +4,9 @@ import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 const ModalContext = createContext(null);
 
-export function useTradeGuardModal() {
+export function useLimitPactModal() {
   const value = useContext(ModalContext);
-  if (!value) throw new Error("useTradeGuardModal must be used inside ModalProvider");
+  if (!value) throw new Error("useLimitPactModal must be used inside ModalProvider");
   return value;
 }
 
@@ -98,7 +98,7 @@ export function ModalProvider({ children }) {
 }
 
 export function ModalButton({ modal, className = "", children }) {
-  const { openModal } = useTradeGuardModal();
+  const { openModal } = useLimitPactModal();
   return (
     <button type="button" className={className} onClick={() => openModal(modal)}>
       {children}
@@ -114,7 +114,7 @@ function Success({ type }) {
       <h3 id="modal-title">{isBeta ? "You're on the list" : "Message received"}</h3>
       <p>
         {isBeta
-          ? "Thanks for your interest in the TradeGuard private beta. We'll reach out as spots open up."
+          ? "Thanks for your interest in the LimitPact private beta. We'll reach out as spots open up."
           : "Thanks for reaching out. We'll reply to your email as soon as we can."}
       </p>
     </div>
@@ -150,7 +150,7 @@ function ContactForm({ onSuccess }) {
   return (
     <form className="modalForm" onSubmit={(event) => { event.preventDefault(); onSuccess(); }}>
       <div className="formIntro">
-        <h3 id="modal-title">Contact TradeGuard</h3>
+        <h3 id="modal-title">Contact LimitPact</h3>
         <p>For traders and integration partners alike. We read every message.</p>
       </div>
       <Field label="Name" id="contact-name">

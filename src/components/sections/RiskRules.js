@@ -1,13 +1,13 @@
 const rules = [
   {
     title: "Maximum Daily Loss", icon: "↓", tone: "red", badge: "Approaching Limit", badgeTone: "amber",
-    copy: "Set the maximum you're willing to lose in a day. When the limit is reached, TradeGuard can activate your configured protection.",
+    copy: "Set the maximum you're willing to lose in a day. When the limit is reached, LimitPact can activate your configured protection.",
     metrics: [["Limit", "−$500", ""], ["Current P&L", "−$472", "amber"]],
     progress: "94%", progressLabel: "94% of daily loss limit used", progressTone: "loss",
   },
   {
     title: "Profit Protection", icon: "◇", tone: "green", badge: "Protection Active", badgeTone: "green",
-    copy: "Reach a strong profit and TradeGuard can protect part of the day's gains once a configured threshold is crossed.",
+    copy: "Reach a strong profit and LimitPact can protect part of the day's gains once a configured threshold is crossed.",
     metrics: [["Session High", "+$850", ""], ["Protected Floor", "+$500", "green"], ["Current", "+$520", "green"]],
   },
   {

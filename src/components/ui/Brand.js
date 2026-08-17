@@ -4,13 +4,12 @@ export default function Brand({ compact = false }) {
   return (
     <span className="brand">
       <Image
-        src="/brand/tradeguard-mark.png"
-        alt=""
-        width={compact ? 28 : 30}
-        height={compact ? 28 : 30}
-        className="brandMark"
+        src="/brand/limitpact-logo.png"
+        alt="LimitPact"
+        width={compact ? 81 : 87}
+        height={compact ? 27 : 29}
+        className="brandLogo"
       />
-      <span className={compact ? "brandName brandNameSmall" : "brandName"}>TradeGuard</span>
     </span>
   );
 }

@@ -16,11 +16,23 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "TradeGuard — Trading Discipline & Risk Protection",
+  metadataBase: new URL("https://limitpact.com"),
+  title: "LimitPact — Trading Discipline & Risk Protection",
   description:
-    "TradeGuard helps futures traders define, monitor, and enforce personal trading discipline and risk rules.",
+    "LimitPact helps futures traders define, monitor, and enforce personal trading discipline and risk rules.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://limitpact.com",
+    siteName: "LimitPact",
+    title: "LimitPact — Trading Discipline & Risk Protection",
+    description:
+      "LimitPact helps futures traders define, monitor, and enforce personal trading discipline and risk rules.",
+  },
   icons: {
-    icon: "/brand/tradeguard.ico",
+    icon: "/brand/limitpact.ico",
   },
 };
 
